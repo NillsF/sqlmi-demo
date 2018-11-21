@@ -46,7 +46,7 @@
             "apiVersion": "2017-10-01",
             "type": "Microsoft.Network/publicIPAddresses",
             "name": "[variables('gatewayPublicIpAddressName')]",
-            "location": "[resourceGroup().location]",
+            "location": "westus2",
             "properties": {
                 "publicIPAllocationMethod": "Dynamic"
             }
@@ -55,7 +55,7 @@
             "apiVersion": "2017-10-01",
             "type": "Microsoft.Network/virtualNetworkGateways",
             "name": "[variables('gatewayName')]",
-            "location": "[resourceGroup().location]",
+            "location": "westus2",
             "dependsOn": [
                 "[concat('Microsoft.Network/publicIPAddresses/', variables('gatewayPublicIpAddressName'))]"
             ],
